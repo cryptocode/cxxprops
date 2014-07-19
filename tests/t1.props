@@ -1,0 +1,75 @@
+# Comment
+str = Some "quoted" value
+nospace="nospace"
+somespace="   some space  "
+somespace2=\ \ some space 2  \
+quoteit = ""quote and "quote" works""
+multiline=  many \
+            values on separate-\
+            lines
+
+this-key-has-no-value=
+
+this-line-is-considered-a-key-with-no-value
+
+
+
+# In normal mode, everything
+ # must be
+    # preserved, including white spaces
+
+    prop.indented = abc
+
+! A different kind of comment
+
+                bind      =   0.0.0.0
+
+port = 8443
+key with spaces = value
+removeme = somevalue
+
+escaped.leading.spaces = \ \ \ \ A space-indented string
+escaped.leading.and.trailing.spaces = \ \ \ \ Another string\u0020
+
+unicode=abc 嗨 xyz
+
+value-has-leading-spaces-in-quotes = "    leading spaces"
+
+quotes-multi-line = " abc" \
+    " def "  \
+  ghi \
+  "jkl"
+
+quotes-with-quote-in-it = "  this is "quoted", but that's ok  "
+
+# Template variables
+<inner2>
+inner2
+{
+    value = abcd
+}
+</inner2>
+
+server.alternative
+{
+    name = servername-alt
+
+    log
+    {
+        level = info
+
+        inner
+        {
+            value = abc
+        }
+
+        %inner2%
+    }
+}
+
+# Prefix group
+server
+{
+    name = servername
+    log.level = debug
+}

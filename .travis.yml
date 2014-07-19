@@ -1,0 +1,8 @@
+sudo: false
+language: cpp
+compiler:
+  - clang
+
+script:
+  - cmake --build cmake-build-debug --target cxxprops -- -j 4
+  - cmake-build-debug/cxxprops tests/t1.props
